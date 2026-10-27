@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102f5d" />
+  <meta name="description" content="Portal do Estado Nacional Ferreirista — liderança, instituições e atualidade." />
+  <title>Estado Nacional Ferreirista | Portal Institucional</title>
+  <link rel="icon" href="assets/brasao.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar para o conteúdo</a>
+
+  <div class="utility">
+    <div class="container utility-inner">
+      <span><i class="fa-regular fa-calendar"></i> <span id="today"></span></span>
+      <div class="utility-actions">
+        <button id="fontDown" aria-label="Reduzir tamanho de letra">A−</button>
+        <button id="fontUp" aria-label="Aumentar tamanho de letra">A+</button>
+        <div class="language-switch" role="group" aria-label="Idioma"><button id="langPT" class="is-current" aria-pressed="true">PT</button><span aria-hidden="true">/</span><button id="langEN" aria-pressed="false">EN</button></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#/" aria-label="Página inicial do Estado Nacional Ferreirista">
+        <img src="assets/brasao.png" alt="Brasão do Estado Nacional Ferreirista" />
+        <span class="brand-name">
+          <span class="brand-kicker">Portal institucional</span>
+          <strong>ESTADO NACIONAL<br />FERREIRISTA</strong>
+          <small>Unidade · Serviço · Futuro</small>
+        </span>
+      </a>
+
+      <div class="header-tools">
+        <div class="institution-mark">
+          <span>ENF</span>
+          <small>INSTITUIÇÕES NACIONAIS</small>
+        </div>
+        <button class="search-btn" id="searchOpen" aria-label="Abrir pesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="hamburger" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav" id="siteNav" aria-label="Menu principal">
+    <div class="container nav-inner">
+      <a href="#/" data-route="/">Início</a>
+      <a href="#/lider" data-route="/lider">O Líder</a>
+      <a href="#/governo" data-route="/governo">Governo</a>
+      <a href="#/estado" data-route="/estado">O Estado</a>
+      <a href="#/prioridades" data-route="/prioridades">Prioridades</a>
+      <a href="#/atualidade" data-route="/atualidade">Atualidade</a>
+      <a href="#/documentos" data-route="/documentos">Documentos</a>
+      <a href="#/simbolos" data-route="/simbolos">Símbolos Nacionais</a>
+      <a href="#/contactos" data-route="/contactos">Contactos</a>
+    </div>
+  </nav>
+
+  <div id="searchOverlay" class="search-overlay" hidden>
+    <div class="container search-panel">
+      <label for="siteSearch">O que procura?</label>
+      <div class="search-field">
+        <input id="siteSearch" type="search" placeholder="Pesquise por líder, instituições, prioridades…" autocomplete="off" />
+        <button id="searchClose" aria-label="Fechar pesquisa"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/brasao.png" alt="" />
+          <div>
+            <strong>Estado Nacional Ferreirista</strong>
+            <span>Portal institucional independente</span>
+          </div>
+        </div>
+        <a class="back-top" href="#top"><i class="fa-solid fa-arrow-up"></i> Voltar ao topo</a>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h3>Instituições</h3>
+          <a href="#/lider">O Líder</a>
+          <a href="#/governo">Governo</a>
+          <a href="#/estado">Organização do Estado</a>
+        </div>
+        <div>
+          <h3>Informação</h3>
+          <a href="#/prioridades">Prioridades</a>
+          <a href="#/atualidade">Atualidade</a>
+          <a href="#/documentos">Documentos</a>
+        </div>
+        <div>
+          <h3>Contactos</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Sede: Palácio de S. Bento, Praça da Constituição de 1976, 1249-068 Lisboa</p>
+          <p><i class="fa-solid fa-envelope"></i> public@enf.gov</p>
+          <p><i class="fa-solid fa-phone"></i> (+351) 213 919 000</p>
+        </div>
+        <div>
+          <h3>Identidade</h3>
+          <p>Uma apresentação digital concebida para um projeto de história e instituições alternativas.</p>
+          <div class="social-line">
+            <span aria-label="Símbolo institucional"><i class="fa-solid fa-landmark"></i></span>
+            <span aria-label="Emblema nacional"><i class="fa-solid fa-shield-halved"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Estado Nacional Ferreirista — Identidade institucional.</span>
+        <span>Projeto independente; não afiliado ao Governo de Portugal.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
